@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import "./common.scss";
+.m-index{
+	@include flexbox();
+	@include flex-direction(column);
+	heigth:100%;
+	background:#fff;
+	header{
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content();
+		@include align-items();
+		height:2.1rem;
+		background:#a80d0b;
+		text-align:center;
+		p:nth-child(1){
+			@include border-radius(50%);
+			width:.75rem;
+			height:.75rem;
+			background:#f1edda;
+			color:#fff;
+			font-size:.5rem;
+			line-height:.75rem;
+		}
+		p:nth-child(2){
+			display:block;
+			color:#fff;
+			line-height:.3rem;
+			font-size:.16rem;
+		}
+		p:nth-child(3){
+			position:absolute;
+			right:0;
+			top:0;
+			color:#fff;
+			padding:.1rem;
+			font-size:.3rem;
+		}
+	}
+	section{
+		ul{
+			li{
+				@include flexbox();
+				@include justify-content(space-between);
+				padding:0 .1rem;
+				line-height:.44rem;
+				@include border(0 0 1px 0,#969696);
+				font-size:.18rem;
+				span{
+					color:#969696;
+				}
+				span:nth-child(2){
+					padding-left:2.2rem;
+				}
+				b{
+					font-weight:normal;
+					padding-left:.1rem;
+				}
+			}
+		}
+	}
+};
